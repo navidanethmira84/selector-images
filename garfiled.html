@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Selector</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        select{
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        img{
+            margin-top: 20px;
+            width: 250px;
+        }
+        
+    </style>
+
+    <script>
+        function changeImage(){
+
+            var character = document.getElementById("characters").value;
+            var img = document.getElementById("characterImage");
+
+            if(character == "Garfield"){
+                img.src = "garfild.jpg"; 
+                
+            }
+            else if(character == "Odie"){
+                img.src = "Odie.jpg"; 
+                
+            }
+            else if(character == "Nermal"){
+                img.src = "Nermal.jpg"; 
+                
+            }
+            else if(character == "Jon"){
+                img.src = "Jon.jpg"; 
+                
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Select a Character</h2>
+
+    <select id="characters" onchange="changeImage()">
+        <option value="">--Select Character--</option>
+        <option value="Garfield">Garfield</option>
+        <option value="Odie">Odie</option>
+        <option value="Nermal">Nermal</option>
+        <option value="Jon">Jon</option>
+    </select>
+
+    <br><br>
+
+
+    <img id="characterImage" src="" alt="Character Image">
+
+</body>
+</html>
